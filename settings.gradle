@@ -1,0 +1,1 @@
+include ':app', ':lib',':apache-httpcomponents-httpclient', ':apache-httpcomponents-httpcore'
