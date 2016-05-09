@@ -19,12 +19,7 @@ import android.widget.TableRow;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.kid.retro.com.tracerttask.MainActivity;
 import com.kid.retro.com.tracerttask.R;
-import com.kid.retro.com.tracerttask.common.AppSettings;
-import com.squareup.okhttp.FormEncodingBuilder;
-import com.squareup.okhttp.OkHttpClient;
-import com.squareup.okhttp.Request;
 import com.squareup.okhttp.Response;
 
 import org.apache.http.NameValuePair;
@@ -32,7 +27,6 @@ import org.apache.http.message.BasicNameValuePair;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -128,33 +122,37 @@ public class ChatActivity extends Activity {
             JSONParser json = new JSONParser();
             params = new ArrayList<NameValuePair>();
 
-            params.add(new BasicNameValuePair("user_email_id", AppSettings.getEmail(context)));
-            params.add(new BasicNameValuePair("user_mobile_no", AppSettings.getContactNumber(context)));
-            params.add(new BasicNameValuePair("req_email_id", AppSettings.req_user_email));
-            params.add(new BasicNameValuePair("req_mobile_no", AppSettings.req_user_phone));
+//            params.add(new BasicNameValuePair("user_email_id", AppSettings.getEmail(context)));
+//            params.add(new BasicNameValuePair("user_mobile_no", AppSettings.getContactNumber(context)));
+//            params.add(new BasicNameValuePair("req_email_id", AppSettings.req_user_email));
+//            params.add(new BasicNameValuePair("req_mobile_no", AppSettings.req_user_phone));
+            params.add(new BasicNameValuePair("user_email_id", "babulpatel1309@gmail.com"));
+            params.add(new BasicNameValuePair("user_mobile_no", "7698646474"));
+            params.add(new BasicNameValuePair("req_email_id", "babulpatel1309@gmail.com"));
+            params.add(new BasicNameValuePair("req_mobile_no", "7698646474"));
             params.add(new BasicNameValuePair("msg", chats));
 
 //            JSONObject jObj = json.getJSONFromUrl("http://tracert.retroinfotech.com/get_current_location_apis.php",params);
             JSONObject jObj = json.getJSONFromUrl("http://tracert.retroinfotech.com/chat_msg.php", params);
 //            JSONObject jObj = json.getJSONFromUrl("http://trracert.com/Matrix/chat_msg.php", params);
 
-            OkHttpClient client = new OkHttpClient();
-            Request request = new Request.Builder().url("http://trracert.com/Matrix/chat_msg.php").
-                    post(new FormEncodingBuilder().
-                            add("user_email_id", AppSettings.getEmail(context)).
-                            add("user_mobile_no", AppSettings.getContactNumber(context)).
-                            add("req_email_id", AppSettings.req_user_email).
-                            add("req_mobile_no", AppSettings.req_user_phone).
-                            add("msg", chats).build()).build();
-            try {
-                response = client.newCall(request).execute();
-                if (!response.isSuccessful()) {
-                } else {
-                    result = response.body().string();
-                }
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
+//            OkHttpClient client = new OkHttpClient();
+//            Request request = new Request.Builder().url("http://trracert.com/Matrix/chat_msg.php").
+//                    post(new FormEncodingBuilder().
+//                            add("user_email_id", AppSettings.getEmail(context)).
+//                            add("user_mobile_no", AppSettings.getContactNumber(context)).
+//                            add("req_email_id", AppSettings.req_user_email).
+//                            add("req_mobile_no", AppSettings.req_user_phone).
+//                            add("msg", chats).build()).build();
+//            try {
+//                response = client.newCall(request).execute();
+//                if (!response.isSuccessful()) {
+//                } else {
+//                    result = response.body().string();
+//                }
+//            } catch (IOException e) {
+//                e.printStackTrace();
+//            }
 
 
             //http://trracert.com/Matrix/login_api.php

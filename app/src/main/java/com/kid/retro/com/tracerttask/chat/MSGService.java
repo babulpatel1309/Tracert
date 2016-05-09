@@ -74,7 +74,7 @@ public class MSGService extends IntentService {
         notification.setContentTitle(name);
         notification.setContentText(msg);
         notification.setTicker("New Message !");
-        notification.setSmallIcon(R.drawable.ic_launcher);
+        notification.setSmallIcon(R.drawable.ring);
 
         PendingIntent contentIntent = PendingIntent.getActivity(this, 1000,
                 chat, PendingIntent.FLAG_CANCEL_CURRENT);

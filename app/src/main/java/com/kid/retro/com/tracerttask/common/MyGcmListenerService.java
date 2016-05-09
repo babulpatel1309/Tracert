@@ -11,7 +11,6 @@ import android.media.RingtoneManager;
 import android.net.Uri;
 import android.os.Bundle;
 import android.support.v4.app.NotificationCompat;
-import android.util.Log;
 
 import com.google.android.gms.gcm.GcmListenerService;
 import com.kid.retro.com.tracerttask.MainActivity;
@@ -29,20 +28,26 @@ public class MyGcmListenerService extends GcmListenerService {
     public static String longitude;
 
     private static String TAG = MyGcmListenerService.class.getSimpleName();
+    String message;
 
     @Override
     public void onMessageReceived(String from, Bundle data) {
         super.onMessageReceived(from, data);
-        String message = data.getString("message");
+        if(data.containsKey("message")){
+            message = data.getString("message");
+        }
 
+        if (message != null) {
+            if (message.contains("Shared location with you")) {
+                id = 1;
+                latitude = data.getString("latitude");
+                longitude = data.getString("longitude");
+            } else {
+                id = 2;
+            }
+            sendNotification(from, message);
+        }
 
-     if(message.contains("Shared location with you")){
-         id = 1;
-         latitude = data.getString("latitude");
-         longitude = data.getString("longitude");
-     }else{
-         id =2;
-     }
 
         // [START_EXCLUDE]
         /**
@@ -56,11 +61,11 @@ public class MyGcmListenerService extends GcmListenerService {
          * In some cases it may be useful to show a notification indicating to the user
          * that a message was received.
          */
-        sendNotification(from,message);
+
         // [END_EXCLUDE]
     }
 
-    private void sendNotification(String message,String body) {
+    private void sendNotification(String message, String body) {
         /*Intent intent = new Intent(this, MainActivity_Chat.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         PendingIntent pendingIntent = PendingIntent.getActivity(this, 0 *//* Request code *//*, intent,
@@ -105,7 +110,7 @@ public class MyGcmListenerService extends GcmListenerService {
         String titleMsg;
         if (body != null && !body.equals("null")) {
             titleMsg = body.toString();
-        }else{
+        } else {
             titleMsg = " ";
         }
 
@@ -115,7 +120,7 @@ public class MyGcmListenerService extends GcmListenerService {
         long uniqueIdNew = now.getTime() + 1;
 
         Intent notificationIntent;
-        if(AppSettings.getisLoggedIn(context)) {
+        if (AppSettings.getisLoggedIn(context)) {
             notificationIntent = new Intent(context, MainActivity.class);
             notificationIntent.putExtra("id", id);
 
@@ -123,11 +128,10 @@ public class MyGcmListenerService extends GcmListenerService {
                 notificationIntent.putExtra("latitude", latitude);
                 notificationIntent.putExtra("longitude", longitude);
             }
-        }else {
+        } else {
             notificationIntent = new Intent(context, SplashActivity.class);
-
         }
-       // notificationIntent.addFlags()
+        // notificationIntent.addFlags()
 
         notificationIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         // updateMyActivity(context, "unique_name");
@@ -138,7 +142,7 @@ public class MyGcmListenerService extends GcmListenerService {
         edt.commit();
        /* notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP
                 | Intent.FLAG_ACTIVITY_SINGLE_TOP);*/
-        notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP );
+        notificationIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         notificationIntent.setAction("com.root.gcmtask" + uniqueId);
         Uri alarmSound = RingtoneManager
                 .getDefaultUri(RingtoneManager.TYPE_NOTIFICATION);
@@ -150,7 +154,7 @@ public class MyGcmListenerService extends GcmListenerService {
                 .setContentTitle(titleMsg).setContentText(body)
                 .setAutoCancel(true).setLights(Color.RED, 3000, 3000)
                 .setSound(alarmSound)
-                .setVibrate(new long[] { 1000, 1000, 1000, 1000, 1000 })
+                .setVibrate(new long[]{1000, 1000, 1000, 1000, 1000})
                 .setColor(Color.BLUE)
                 .setContentIntent(intent).setWhen(when);
 
@@ -162,9 +166,6 @@ public class MyGcmListenerService extends GcmListenerService {
         mBuilder.getNotification().flags |= Notification.FLAG_AUTO_CANCEL;
 
         notificationManager.notify((int) uniqueIdNew, mBuilder.build());
-
-
-
     }
 
 }
