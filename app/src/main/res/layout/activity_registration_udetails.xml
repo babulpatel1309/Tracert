@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="com.kid.retro.com.tracerttask.RegistrationUDetails">
+
+
+
+    <LinearLayout
+        android:id="@+id/linUDetails"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical|center_horizontal">
+
+        <!--<ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/profile_pic"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-43dp"/>-->
+
+        <EditText
+            android:id="@+id/edtFName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textbox"
+            android:singleLine="true"
+            android:layout_marginTop="20dp"
+            android:textColor="#1cbbb4"
+            android:paddingLeft="8dp"
+            android:textColorHint="#1cbbb4"
+            android:layout_gravity="center_horizontal"
+            android:hint="First Name" />
+
+        <EditText
+            android:id="@+id/edtLName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textbox"
+            android:singleLine="true"
+            android:layout_marginTop="20dp"
+            android:textColor="#1cbbb4"
+            android:paddingLeft="8dp"
+            android:textColorHint="#1cbbb4"
+            android:layout_gravity="center_horizontal"
+            android:hint="Last Name" />
+
+        <EditText
+            android:id="@+id/edtDOB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/textbox"
+            android:singleLine="true"
+            android:layout_marginTop="20dp"
+            android:textColor="#1cbbb4"
+            android:paddingLeft="8dp"
+            android:textColorHint="#1cbbb4"
+            android:layout_gravity="center_horizontal"
+            android:hint="dd-mm-yyyy" />
+
+        <RelativeLayout
+            android:id="@+id/relSubmitUDetails"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtSchoolPassword"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp">
+
+            <ImageView
+                android:id="@+id/btnSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/signin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="GO"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    android:padding="10dip">
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/frndEmail"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_toLeftOf="@+id/go"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:singleLine="true"
+            android:layout_marginRight="10dp"/>
+
+        <Button
+            android:id="@+id/go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="Go"
+            android:background="#f54a4a"
+            android:textColor="@android:color/white"/>
+
+    </RelativeLayout>
+
+    <Spinner
+        android:id="@+id/frndSpinner"
+        android:layout_width="wrap_content"
+        android:entries="@array/followlist"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+    </Spinner>
+
+    <ListView
+        android:id="@+id/frndList"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+    </ListView>
+
+    <!--<TextView
+        android:id="@+id/txtContacts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Contatcts"
+        android:textSize="20dp"
+        android:layout_margin="15dp"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/sep_gray"/>
+
+    <ListView
+        android:id="@+id/listContacts"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+
+    </ListView>-->
+
+
+</LinearLayout>

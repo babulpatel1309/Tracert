@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f54a4a"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <LinearLayout
+            android:id="@+id/linUDetails"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imgUProfile"
+                android:layout_width="300dp"
+                android:layout_marginTop="20dp"
+                android:layout_height="300dp"
+                android:background="@drawable/user_1"
+                android:layout_gravity="center_horizontal"/>
+
+            <!--<com.kid.retro.com.tracerttask.common.CircleImageView
+                android:id="@+id/imgUProfile"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@drawable/user_male_circ_selected"
+                android:layout_marginTop="20dp"/>-->
+
+            <TextView
+                android:id="@+id/getUserName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="User Name"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="30dp"/>
+
+            <TextView
+                android:id="@+id/getEmailId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email-id"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/getContactNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contact Number"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/getFName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="First Name"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/getLName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Last Name"
+                android:textSize="18dp"
+                android:layout_marginLeft="20dp"
+                android:textColor="@android:color/white"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"/>
+
+
+            <!--<ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_pic"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="-43dp"/>-->
+
+            <!--<EditText
+                android:id="@+id/edtFName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbox"
+                android:singleLine="true"
+                android:layout_marginTop="20dp"
+                android:textColor="#1cbbb4"
+                android:paddingLeft="8dp"
+                android:textColorHint="#1cbbb4"
+                android:layout_gravity="center_horizontal"
+                android:hint="First Name" />
+
+            <EditText
+                android:id="@+id/edtLName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbox"
+                android:singleLine="true"
+                android:layout_marginTop="20dp"
+                android:textColor="#1cbbb4"
+                android:paddingLeft="8dp"
+                android:textColorHint="#1cbbb4"
+                android:layout_gravity="center_horizontal"
+                android:hint="Last Name" />
+
+            <EditText
+                android:id="@+id/edtDOB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textbox"
+                android:singleLine="true"
+                android:layout_marginTop="20dp"
+                android:textColor="#1cbbb4"
+                android:paddingLeft="8dp"
+                android:textColorHint="#1cbbb4"
+                android:layout_gravity="center_horizontal"
+                android:hint="dd-mm-yyyy" />-->
+
+            <!--<RelativeLayout
+                android:id="@+id/relSubmitUDetails"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/edtSchoolPassword"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="30dp">
+
+                <ImageView
+                    android:id="@+id/btnSignUp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:background="@drawable/signin" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:text="GO"
+                    android:textStyle="bold"
+                    android:textColor="@android:color/white"
+                    android:textSize="18dp" />
+
+            </RelativeLayout>-->
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

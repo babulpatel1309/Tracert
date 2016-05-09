@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+
+    <RelativeLayout
+        android:id="@+id/relativeSet"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true">
+
+
+        <com.kid.retro.com.tracerttask.common.CustomAutoCompleteTextView
+            android:id="@+id/destination"
+            android:layout_width="fill_parent"
+            android:layout_height="48dp"
+            android:layout_alignParentTop="true"
+            android:layout_toLeftOf="@+id/go"
+            android:hint="Enter destination"
+            android:layout_centerVertical="true"
+            android:paddingLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:singleLine="true" />
+
+        <Button
+            android:id="@+id/go"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#f54a4a"
+            android:layout_margin="10dp"
+            android:textColor="@android:color/white"
+            android:text="Go" />
+
+
+    </RelativeLayout>
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapviewPickLocation"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@+id/relativeSet"
+        android:layout_marginTop="5dp" />
+
+    <Button
+        android:id="@+id/setDestination"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="#f54a4a"
+        android:text="Set Destination"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:textSize="15dp" />
+
+
+</RelativeLayout>

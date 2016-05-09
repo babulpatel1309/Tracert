@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@android:color/white"
+    android:layout_height="match_parent">
+
+
+
+    <!--<TextView
+        android:id="@+id/txtDestinationAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="data"
+        android:layout_centerHorizontal="true"
+        android:textSize="15sp"
+        android:layout_below="@+id/headerSetDestination"/>-->
+
+    <com.google.android.gms.maps.MapView
+        android:id="@+id/mapviewPickLocation"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginTop="5dp"/>
+
+    <Button
+        android:id="@+id/setDestination"
+        android:layout_width="150dp"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:background="#f54a4a"
+        android:text="Set Destination"
+        android:textColor="@android:color/white"
+        android:textAllCaps="false"
+        android:textSize="15dp"/>
+
+    <!--<ImageView
+        android:id="@+id/footer_set_destination"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/footer" />-->
+</RelativeLayout>

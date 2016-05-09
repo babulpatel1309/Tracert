@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/chat"
+        android:orderInCategory="100"
+        android:title="Search"
+        android:icon="@drawable/chat_1"
+        app:showAsAction="collapseActionView|ifRoom" />
+
+    <item
+        android:id="@+id/add_contacts"
+        android:orderInCategory="100"
+        android:title="Search"
+        android:icon="@drawable/agenda"
+        app:showAsAction="collapseActionView|ifRoom" />
+
+    <item
+        android:id="@+id/userProfie"
+        android:orderInCategory="100"
+        android:title="Search"
+        android:icon="@drawable/user_1"
+        app:showAsAction="collapseActionView|ifRoom" />
+
+</menu>

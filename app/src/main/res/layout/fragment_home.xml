@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPagerItemDetails"
+                android:layout_width="fill_parent"
+                android:layout_height="150dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp" />
+
+            <com.viewpagerindicator.CirclePageIndicator
+                android:id="@+id/titles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewPagerItemDetails"
+                app:fillColor="@color/toolbar"
+                android:padding="3dp"
+                app:pageColor="@android:color/transparent"
+                app:radius="3dp"
+                app:strokeColor="@color/toolbar" />
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/mapcard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/titles"
+                card_view:cardCornerRadius="4dp"
+                card_view:cardElevation="6dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                card_view:cardUseCompatPadding="true">
+
+                <com.google.android.gms.maps.MapView
+                    android:id="@+id/mapviewShowHome"
+                    android:layout_width="fill_parent"
+                    android:layout_height="300dp"
+                    android:layout_below="@+id/viewPagerItemDetails"
+                     />
+
+            </android.support.v7.widget.CardView>
+
+
+            <RelativeLayout
+                android:id="@+id/relBtmImg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/mapcard"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginLeft="20dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/total_k_m" />
+
+                    <TextView
+                        android:id="@+id/totalkm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="20dp"
+                        android:text="30 km"
+                        android:textColor="@android:color/black"
+                        android:textSize="30dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="20dp"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/friends" />
+
+                    <RelativeLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/txtNumFriends"
+                            android:layout_width="50dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:text="0"
+                            android:textColor="@android:color/black"
+                            android:textSize="30dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="30dp"
+                            android:layout_marginTop="14dp"
+                            android:layout_toRightOf="@+id/txtNumFriends"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Request"
+                                android:textColor="@android:color/black" />
+
+                            <TextView
+                                android:id="@+id/noReq"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginTop="6dp"
+                                android:gravity="center_horizontal"
+                                android:text="12"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="20dp"
+                android:layout_below="@+id/relBtmImg" />
+
+            <!--<LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentBottom="true"
+                android:layout_below="@+id/mapviewShowHome"
+                android:orientation="vertical"
+                android:padding="10dip">
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:background="@drawable/bar"
+                    android:padding="10dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="5dip"
+                        android:text="Total travelled km"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dip" />
+
+                    <TextView
+                        android:id="@+id/totalkm"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:paddingRight="5dip"
+                        android:text="0.0km"
+                        android:maxLength="5"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dip" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_marginTop="12dp"
+                    android:background="@drawable/bar"
+                    android:padding="10dip">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="5dip"
+                        android:text="You travelled km"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dip" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="5dip"
+                        android:text="0.0%"
+                        android:textColor="@android:color/white"
+                        android:textSize="20dip" />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>-->
+
+        </RelativeLayout>
+
+    </ScrollView>
+</RelativeLayout>

@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Trracert</string>
+    <string name="title_activity_splash">SplashActivity</string>
+
+    <string-array name="nav_drawer_items">
+        <item>Home</item>
+        <item>WelCome User</item>
+        <item>Monitor</item>
+        <item>Set Destination</item>
+        <item>Location History</item>
+        <item>Expanse Statement</item>
+        <item>Schedule</item>
+        <item>Chat</item>
+        <item>Follow</item>
+        <item>LogOut</item>
+    </string-array>
+
+    <array name="nav_drawer_icons">
+        <item>@drawable/chat</item>
+        <item>@drawable/pro</item>
+        <item>@drawable/monitor</item>
+        <item>@drawable/set_destination</item>
+        <item>@drawable/location_history</item>
+        <item>@drawable/expense_statements</item>
+        <item>@drawable/schedual</item>
+        <item>@drawable/chat</item>
+        <item>@drawable/follow</item>
+        <item>@drawable/logout</item>
+    </array>
+
+    <string name="DB_NAME">Tracert.sqlite</string>
+    <string name="DB_PATH">data/data/com.kid.retro.com.tracerttask/databases/</string>
+
+    <string name="drawer_open">Menu opened</string>
+    <string name="drawer_close">Menu closed</string>
+
+    <string name="toast_crash">crash report updated..!!</string>
+    <string-array name="followlist">
+        <item>Friends</item>
+        <item>Request</item>
+    </string-array>
+
+
+    <string name="gcm_send_message">Token retrieved and sent to server! You can now use gcmsender to\send downstream messages to this app.</string>
+    <string name="registering_message">Generating InstanceID token…</string>
+    <string name="token_error_message">An error occurred while either fetching the InstanceID token,sending the fetched token to the server or subscribing to the PubSub topic. Please tryrunning the sample again.</string>
+    <string name="gcm_defaultSenderId">730138685237</string>
+    <string name="gcm_api_key">AIzaSyAIyPqA2jp6W2PXbKyvFYjpZpf6A9YqDPA</string>
+
+
+    // Schedular
+    <string name="task_saved_message">Task has been saved</string>
+    <string name="pref_task_title_key">default_reminder_title</string>
+    <string name="pref_default_time_from_now_key">time_from_now_default</string>
+    <string name="menu_delete">Delete Reminder</string>
+    <string name="notify_new_task_title">Task Reminder!</string>
+</resources>

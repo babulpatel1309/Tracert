@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f54a4a"
+    tools:context="com.kid.retro.com.tracerttask.RegiatrationVarification">
+
+    
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true">
+
+        <!--<ImageView
+            android:id="@+id/logo"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="20dp"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/splash_logo" />-->
+
+        <TextView
+            android:id="@+id/txtVarification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text="Enter the verification code"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp"
+            android:textColor="@android:color/white"/>
+
+        <EditText
+            android:id="@+id/edtVarificationCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/txtVarification"
+            android:singleLine="true"
+            android:paddingLeft="8dp"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:inputType="number"
+            android:textColor="@android:color/white"
+            android:textColorHint="@android:color/white"
+            android:hint="Code" />
+
+        <!--<RelativeLayout
+            android:id="@+id/relSendVarifiction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtVarificationCode"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:layout_marginBottom="30dp">
+
+            <ImageView
+                android:id="@+id/btnSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/signin" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="VARIFY"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:textSize="18dp" />
+
+        </RelativeLayout>-->
+
+
+        <RelativeLayout
+            android:id="@+id/relSendVarifiction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/edtVarificationCode"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:id="@+id/btnSignUp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/button_reg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingTop="8dp"
+                android:text="Verify"
+                android:textColor="#f54a4a"
+                android:textSize="20dp" />
+
+        </RelativeLayout>
+        <!--<ImageView
+            android:id="@+id/footer_home"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/footer" />-->
+
+    </RelativeLayout>
+
+</RelativeLayout>

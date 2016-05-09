@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <array name="landing_bg">
+        <item>@color/light_green</item>
+        <item>@color/light_purple</item>
+        <item>@color/light_orange</item>
+        <item>@color/light_cyan</item>
+        <item>@color/light_purple</item>
+        <item>@color/light_orange</item>
+    </array>
+
+    <array name="icons">
+        <item>@drawable/dash</item>
+        <item>@drawable/left_menu</item>
+        <item>@drawable/lh</item>
+        <item>@drawable/moniter</item>
+        <item>@drawable/rp</item>
+        <item>@drawable/sp_sc</item>
+    </array>
+
+    <string-array name="titles" >
+
+        <item>DashBoard</item>
+        <item>Slider</item>
+        <item>Location History</item>
+        <item>Live Monitor</item>
+        <item>Route</item>
+        <item>Welcome</item>
+
+    </string-array>
+
+    <string-array name="hints" >
+
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+        <item></item>
+    </string-array>
+</resources>

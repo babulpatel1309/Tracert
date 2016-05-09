@@ -1,0 +1,45 @@
+﻿* { padding: 0; margin: 0; }
+html, body { height: 100%; }
+body {
+    background-color: #F1F1F1 !important;
+}
+
+.right.carousel-control { display: none; }
+.left.carousel-control { display: none; }
+.carousel-indicators {text-align: right;
+    bottom: 6px;
+    width: 68%; }
+
+@keyframes animatedBackground {
+    0% { background-position: 0 -16px; }
+    50% { background-position: -780px -16px; }
+    100% { background-position: 0 -16px; }
+}
+@-moz-keyframes animatedBackground {
+    0% { background-position: 0 -16px; }
+    50% { background-position: -780px -16px; }
+    100% { background-position: 0 -16px; }
+}
+@-webkit-keyframes animatedBackground {
+    0% { background-position: 0 -16px; }
+    50% { background-position: -780px -16px; }
+    100% { background-position: 0 -16px; }
+}
+@-ms-keyframes animatedBackground {
+    0% { background-position: 0 -16px; }
+    50% { background-position: -780px -16px; }
+    100% { background-position: 0 -16px; }
+}
+@-o-keyframes animatedBackground {
+    0% { background-position: 0 -16px; }
+    50% { background-position: -780px -16px; }
+    100% { background-position: 0 -16px; }
+}
+
+.animate-icons-background {
+    animation: animatedBackground 50s linear infinite;
+    -moz-animation: animatedBackground 50s linear infinite;
+    -webkit-animation: animatedBackground 50s linear infinite;
+    -ms-animation: animatedBackground 50s linear infinite;
+    -o-animation: animatedBackground 50s linear infinite;
+}

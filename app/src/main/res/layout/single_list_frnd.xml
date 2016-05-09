@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dip"
+    android:background="@drawable/list_selector">
+
+
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/icon"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:text="Subhash"
+        android:textColor="@android:color/secondary_text_light" />
+
+
+    <LinearLayout
+        android:id="@+id/ll_inner"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_accept"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f54a4a"
+            android:layout_marginRight="10dp"
+            android:textColor="@android:color/white"
+            android:text="Accept"/>
+
+        <Button
+            android:id="@+id/btn_decline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="#f54a4a"
+            android:textColor="@android:color/white"
+            android:text="Decline"/>
+    </LinearLayout>
+
+</RelativeLayout>
